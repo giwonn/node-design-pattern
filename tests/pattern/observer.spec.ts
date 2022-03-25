@@ -4,11 +4,16 @@ import type { Listeners } from '@/pattern/observer';
 describe('Observer Pattern', () => {
   const eventEmitter: EventEmitter = new EventEmitter();
 
-  describe('EventEmitter의 이벤트 "test"', () => {
-    describe(`리스너 () => 'test1' 추가 `, () => {
-      test('첫번째 리스너가 "test1"을 리턴한다.', () => {
+  describe('Class - EventEmitter', () => {
+    describe(`Method`, () => {
+      test('on() - 새로운 이벤트 등록 및 리스너 추가', () => {
         eventEmitter.on('test', () => 'test1');
-        expect(eventEmitter.listeners('test')[0]()).toBe('test1');
+        expect(eventEmitter.listeners('test')[0]()).toBe('test1'); // toBe() : 원시타입의 값, 객체의 참조값 비교
+      });
+      test('on() - 존재하는 이벤트에 리스너 추가', () => {
+        eventEmitter.on('test', () => 'test2');
+        const list = eventEmitter.listeners('test').map((listener) => listener());
+        expect(list).toEqual(['test1', 'test2']); // toEqual() : // toBe() : 래퍼 타입, 객체 내부의 값 비교
       });
     });
   });

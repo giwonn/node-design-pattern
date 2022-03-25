@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "strict": true, // use strict랑 같은듯...? 엄격하게 타입을 검사함
+    "module": "ESNext", // 가능하면 최신으로 써보자
+    "moduleResolution": "classic",
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "outDir": "./dist",
+    "esModuleInterop": false
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
+}

@@ -6,8 +6,12 @@
     "target": "ESNext",
     "lib": ["ESNext"],
     "outDir": "./dist",
-    "esModuleInterop": false
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "exclude": ["node_modules"],
-  "include": ["src/**/*"]
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*", "tests/**/*.spec.ts"]
 }

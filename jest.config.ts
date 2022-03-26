@@ -7,7 +7,7 @@ const config: Config.InitialOptions = {
     '^.+\\.ts': 'ts-jest',
   },
   testEnvironment: 'node', //테스트 환경
-  testMatch: ['<rootDir>/tests/**/*.spec.ts'], //테스트 파일 위치
+  testMatch: ['<rootDir>/src/**/*.spec.ts'], //테스트 파일 위치
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },

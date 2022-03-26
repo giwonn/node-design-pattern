@@ -7,11 +7,12 @@
     "lib": ["ESNext"],
     "outDir": "./dist",
     "esModuleInterop": true,
+    "removeComments": true, // 주석 삭제
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "exclude": ["node_modules", "dist"],
-  "include": ["src/**/*", "tests/**/*.spec.ts"]
+  "exclude": ["src/**/*.spec.ts"],
+  "include": ["src/**/*"]
 }

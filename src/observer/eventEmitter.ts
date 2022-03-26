@@ -6,8 +6,8 @@ interface IEventEmitter {
   on: (eventName: EventName, callback: Function) => EventEmitter; // 리스너 등록
   once: (eventName: EventName, callback: Function) => EventEmitter; // 리스너 한번만 실행되게 등록
   emit: (eventName: EventName, ...args: any) => boolean; // 등록되어 있는 리스너 호출
-  eventNames: () => EventName[];
-  getMaxListeners: () => number;
+  // eventNames: () => EventName[];
+  // getMaxListeners: () => number;
   listeners: (eventName: EventName) => Array<Listener['listener']>;
 }
 
